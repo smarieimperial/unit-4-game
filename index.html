@@ -3,7 +3,7 @@
     <head>
         <title>Crystals Collector!</title>
         <link rel="stylesheet" type="text/css" href="assets/css/style.css"> <!-- this links to unit-4-game/assets/css/style.css -->
-        <link rel="stylesheet" href="reset.css">
+        <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
     </head>
 
 <body>
@@ -25,8 +25,8 @@
     <div id="first"><h1><span id="randomNumber"></span></h1></div>
 
     <div id="second">
-    <p><span class='updateMe' data-youwin="You win!!"></span></p> <!-- print out either You win!! or You lose!! -->
-    <p><span class='updateMe' data-youlose="You lose!!"></span></p>
+    <p><span id='updateMe' data-youwin="You win!!"></span></p> <!-- print out either You win!! or You lose!! -->
+    <p><span id='update' data-youlose="You lose!!"></span></p>
     <p><h4>Wins: <span id="wins"></span></h4></p> 
     <p><h4>Losses: <span id="losses"></span></h4></p>
     </div>
@@ -36,18 +36,14 @@
     <!-- image of colored gems that Player clicks on -->
     <img height="200px" id="redgem" src="http://i.imgur.com/6ipUqve.gif">    
     <img height="200px" id="yellowgem" src="http://www.clrlworld.com/lapidary/Images/3wisemen.gif">
-    <!-- <img height="200px" id="cleargem" src="https://i.gifer.com/R6oX.gif"> -->
     <img height="180px" id="greengem" src="https://i.gifer.com/7XPV.gif">
-    <!-- <img height="200px" id="dullpurplegem" src="https://media.giphy.com/media/ruViu7ULlBgVG/giphy.gif"> -->
     <img height="200px" id="purplegem" src="https://img1.picmix.com/output/stamp/normal/4/7/7/0/290774_01491.gif">
-    <!-- <img height="200px" id="bluegem" src="https://cdnb.artstation.com/p/assets/images/images/009/406/821/original/anna-mellor-meecham-bluegem-final.gif?1518802668"> -->
-
+    
     <p><h3>Your total score is: <span id="yourScore"></span></h3></p>
     
     <div id="blue"><p><h1><span id="totalScore"></span></h1></p></div>
 
 </div>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
