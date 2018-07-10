@@ -20,47 +20,52 @@
         }
         document.querySelector('#randomNumber').innerText = getRandomIntInclusive(19, 120);
         
-
+        // random number generator between 1-12
         function getRandomGemNumber(min, max) {
             min = Math.ceil(min);
             max = Math.floor(max);
-            return Math.floor(Math.random() * (max - min + 1)) + min; // random number generator 
+            return Math.floor(Math.random() * (max - min + 1)) + min; 
         }
         
 // test the #redgem code that prints out a random gem number to the blue box 'total score' for example
 // first click, the number 4 is generated. Then on second click & so on, the 'total score' is
 // incremented +4 each time:
+//==============================================
 
-    	$('#redgem').on('click', function() {
-        //var gem = $(this);
-        var clicked = getRandomGemNumber(1, 12);
-        document.querySelector('#totalScore').innerText = clicked; 
-        
+    var clicked = Math.ceil(Math.random()*12);
+    var red = clicked;
+
+    $('#redgem').on('click', function() {
+       // var gem = $(this);
+    document.querySelector('#totalScore').innerText = red;  
     });
+
+// =============================================
 
         $('#yellowgem').on('click', function() {
         var gem = $(this);
         console.log(getRandomGemNumber(1, 12));
     });
-
         $('#greengem').on('click', function() {
         var gem = $(this);
         console.log(getRandomGemNumber(1, 12));
     });
-
         $('#purplegem').on('click', function() {
         var gem = $(this);
         var clicked = getRandomGemNumber(1, 12);
         document.querySelector('#totalScore').innerText = clicked; 
     });
 
+// ==============================================
+
     function youwin() {
         document.querySelector('#updateMe').innerText = ('You Win!');
     }
-
     function youLose() {
         document.querySelector('#update').innerText = ('You lose!');
     }
+
+// ===============================================
 
     if (totalScore == getRandomIntInclusive) {
             youwin(); 
@@ -74,8 +79,7 @@
             document.querySelector('#randomNumber').innerText = getRandomIntInclusive(19, 120); 
             // new random number is generated and printed to screen
             
-        }
-        
+        }       
     if (totalScore < getRandomIntInclusive) {
             youLose(); 
             // calls the youLose() function above 
