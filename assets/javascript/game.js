@@ -26,20 +26,15 @@
             max = Math.floor(max);
             return Math.floor(Math.random() * (max - min + 1)) + min; // random number generator 
         }
-
         
-            
 // test the #redgem code that prints out a random gem number to the blue box 'total score' for example
 // first click, the number 4 is generated. Then on second click & so on, the 'total score' is
 // incremented +4 each time:
-        var red = 0;
 
     	$('#redgem').on('click', function() {
-        var gem = $(this);
-        var clicked = getRandomIntInclusive(1, 12);
-        red = clicked;
-        red++;
-        document.querySelector('#totalScore').innerText = red; 
+        //var gem = $(this);
+        var clicked = getRandomGemNumber(1, 12);
+        document.querySelector('#totalScore').innerText = clicked; 
         
     });
 
@@ -55,7 +50,8 @@
 
         $('#purplegem').on('click', function() {
         var gem = $(this);
-        console.log(getRandomGemNumber(1, 12));
+        var clicked = getRandomGemNumber(1, 12);
+        document.querySelector('#totalScore').innerText = clicked; 
     });
 
     function youwin() {
