@@ -1,6 +1,14 @@
+        
         var wins = 0;
     	var losses = 0;
         var total = 0;
+
+//write a function, when each jewel is clicked, the total will add up so, if red = 3, 
+// yellow = 5, green = 1, purple = 8
+//and the number in pink box is = 20
+// then if player clicks on red 2x, yellow 2x, purple 1x, then the total will = 23
+// and the game will be 23 > 20 therefore 'You lose!' gets printed to screen
+//and losses gets updated to 1.
 
         var arrayWins = [];  //array to hold wins and to push wins to
         var arrayLosses = [];  //array to hold losses and to push losses to
@@ -9,7 +17,6 @@
         $('#losses').text(losses);  // using jquery prints the number 0 to screen
         $('#totalScore').text(total);  // using jquery prints the number 0 to screen
 
-        
      
         //this CODE below WORKS ~ prints random number to pink box.
         function getRandomIntInclusive(min, max) {
@@ -19,9 +26,9 @@
         //the player has to reach. Random number to be between 19 and 120.
         }
         document.querySelector('#randomNumber').innerText = getRandomIntInclusive(19, 120);
-        
-        // random number generator between 1-12
-        function getRandomGemNumber(min, max) {
+
+        // random number generator between 1-12 
+            function getRandomGemNumber(min, max) {
             min = Math.ceil(min);
             max = Math.floor(max);
             return Math.floor(Math.random() * (max - min + 1)) + min; 
@@ -29,7 +36,7 @@
         
 // test the #redgem code that prints out a random gem number to the blue box 'total score' for example
 // first click, the number 4 is generated. Then on second click & so on, the 'total score' is
-// incremented +4 each time:
+// incremented +4 each time, +4 again until end of game:
 //==============================================
 
     var clicked = Math.ceil(Math.random()*12);
@@ -38,22 +45,31 @@
     $('#redgem').on('click', function() {
        // var gem = $(this);
     document.querySelector('#totalScore').innerText = red;  
+    total = red;
     });
 
 // =============================================
 
+    var clicked = Math.ceil(Math.random()*12);
+    var yellow = clicked;
         $('#yellowgem').on('click', function() {
-        var gem = $(this);
-        console.log(getRandomGemNumber(1, 12));
+        //var gem = $(this);
+        //console.log(getRandomGemNumber(1, 12));
+        document.querySelector('#totalScore').innerText = yellow;  
     });
+    var clicked = Math.ceil(Math.random()*12);
+    var green = clicked;
         $('#greengem').on('click', function() {
-        var gem = $(this);
-        console.log(getRandomGemNumber(1, 12));
+        //var gem = $(this);
+        //console.log(getRandomGemNumber(1, 12));
+        document.querySelector('#totalScore').innerText = green; 
     });
+    var clicked = Math.ceil(Math.random()*12);
+    var purple = clicked;
         $('#purplegem').on('click', function() {
-        var gem = $(this);
-        var clicked = getRandomGemNumber(1, 12);
-        document.querySelector('#totalScore').innerText = clicked; 
+        //var gem = $(this);
+        //var clicked = getRandomGemNumber(1, 12);
+        document.querySelector('#totalScore').innerText = purple; 
     });
 
 // ==============================================
