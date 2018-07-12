@@ -17,19 +17,29 @@
           return Math.floor(Math.random() * (max - min + 1)) + min; // print to screen a random number in a box for example 33 that
         //the player has to reach. Random number to be between 19 and 120.
         }
-         
+   
         var randomNumber = getRandomIntInclusive(19, 120);
         document.querySelector('#randomNumber').innerText = randomNumber;
-       
-        // random number generator between 1-12 
-            function getRandomGemNumber(min, max) {
-            min = Math.ceil(min);
-            max = Math.floor(max);
-            return Math.floor(Math.random() * (max - min + 1)) + min; 
-        }
-        
-//==============================================
 
+        function zero() {
+            total = 0;
+        }
+        function game() {
+            
+            if (losses > 0) {
+                    var randomNumber = getRandomIntInclusive(19, 120);
+                    document.querySelector('#randomNumber').innerText = randomNumber;
+                    zero();
+
+                } else if (wins > 0) {
+                    var randomNumber = getRandomIntInclusive(19, 120);
+                    document.querySelector('#randomNumber').innerText = randomNumber;
+                    zero();
+                }
+        }
+   
+//==============================================
+        // red gem
     var clicked = Math.ceil(Math.random()*12);
     var red = clicked;
         $('#redgem').on('click', function() {
@@ -39,9 +49,7 @@
             youlose();
             youwin();
 });
-        
-// =============================================
-
+        // yellow gem
     var clicked = Math.ceil(Math.random()*12);
     var yellow = clicked;
         $('#yellowgem').on('click', function() {
@@ -51,6 +59,7 @@
             youlose();
             youwin();
 });
+        // green gem
     var clicked = Math.ceil(Math.random()*12);
     var green = clicked;
         $('#greengem').on('click', function() {
@@ -60,6 +69,7 @@
             youlose();
             youwin();
 });
+        // purple gem
     var clicked = Math.ceil(Math.random()*12);
     var purple = clicked;
         $('#purplegem').on('click', function() {
@@ -69,29 +79,32 @@
             youlose();
             youwin();
     });
-
-// ==============================================
+// =============================================
 
     function youwin() {
-        if (total == randomNumber) {   
-        document.querySelector('#updateMe').innerText = ('You Win!');
-        wins++;
-        document.querySelector('#wins').innerText = wins; 
-        $('#totalScore').text(); 
-        //total = 0;
+        var num= 0;
+            if (total == randomNumber) {   
+            document.querySelector('#updateMe').innerText = ('You Win!');
+            wins++;
+            document.querySelector('#wins').innerText = wins; 
+            $('#totalScore').text(num); 
+            zero();
+            game();
+        }
     }
-}
-
-// ===============================================
+// ==============================================
 
     function youlose() {
+        var num  = 0;
         if (total > randomNumber) {
              document.querySelector('#update').innerText = ('You lose!');
              losses++;
-             document.querySelector('#losses').innerText = losses; 
-              $('#totalScore').text(); 
-              //total = 0;
-        } 
+             document.querySelector('#losses').innerText = losses;    
+             $('#totalScore').text(num);      
+              zero();   
+              game();    
+                
+        }     
     }
 
    
