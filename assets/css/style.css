@@ -2,6 +2,10 @@ body {
 	font-family: Arial;
 }
 
+#title {
+	margin-left: 30px;
+}
+
 div {
 	
 	float: left;
@@ -12,7 +16,7 @@ div {
 		border-radius: 20px;
 		width: 250px;
 		height: 140px;	
-		padding-left: 10px;
+		padding-left: 20px;
 		margin-right: 20px;
 		margin-bottom: 20px;
 		background-color: pink;
@@ -35,7 +39,7 @@ h3 {
 	border-radius: 20px;
 	width: 250px;
 	height: 35px;
-	padding-left: 10px;
+	padding-left: 20px;
 	padding-top: 10px;
 	background-color: lightblue;
 
@@ -45,8 +49,19 @@ h3 {
 	border-radius: 20px;
 	width: 250px;
 	height: 200px;
-	padding-left: 10px;
+	padding-left: 20px;
 	padding-top: 10px;
 	margin-bottom: 20px;
 	background-color: lightblue;
+}
+#redgem, #yellowgem, #greengem, #purplegem {
+	margin-left: 20px;
+}
+
+footer {
+	clear: both;
+	height: 0px;
+	padding-bottom: 5px;
+	padding-left: 30px;
+	margin-bottom: 90px;
 }
