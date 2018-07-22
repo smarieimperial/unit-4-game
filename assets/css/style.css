@@ -65,3 +65,13 @@ footer {
 	padding-left: 30px;
 	margin-bottom: 90px;
 }
+
+#first:hover, #blue:hover {
+	box-shadow: 15px 15px 15px gray;
+	transition: box-shadow 1s;
+}
+
+#title {
+	color: palevioletred;
+
+}
