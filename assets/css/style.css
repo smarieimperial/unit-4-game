@@ -1,9 +1,11 @@
 body {
-	font-family: Arial;
+	/* font-family: 'Permanent Marker', cursive; */
+	font-family: 'Kalam', cursive;
 }
 
 #title {
 	margin-left: 30px;
+	font-size: 2em;
 }
 
 div {
